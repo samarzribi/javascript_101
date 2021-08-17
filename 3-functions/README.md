@@ -23,7 +23,7 @@
 
 2. Write a sentence in plain English describing how `square(square(15))` is
    evaluated.
-
+  <!-- square of square 15 , (15*15)=225  * (15*15)=225  -->
 3. Rename `square`'s `num` parameter in your above code to `monkey`, and
    rename the uses of that parameter in the body to `monkey` as well. Will the
    function `square` still work? Why or why not?
@@ -35,16 +35,17 @@
    (if any) for each erroneous version? Do the errors make sense?
 
    ```js
-   function square(monkey) {
+   <!-- we need to use the parameter in the return , we can change the parameter to x or we change the x to monket -->
+   function square(x) {
      return x * x;
    }
-
-   function square(5) {
+  <!-- "we can't put number in the parameter we can change the 5 to n or we remove the parameter it will works "  -->
+   function square() {
      return 5 * 5;
    }
-
-   function square("x") {
-     return "x" * "x";
+  <!--" we can't use ("") in the parameter"-->
+   function square(x) {
+     return x * x;
    }
    ```
 
@@ -52,15 +53,15 @@
    invalid definitions into your console and then edit them there):
 
    ```js
-   func square1(x {
+   function square1(x){
      return x * x;
    }
 
-   functionsquare2 x)
+   function square2 (x){
      return x * x;
    }
 
-   function (x) square3 {
+   function square3 (x)  {
      return x * x;
    ```
 
@@ -68,13 +69,14 @@
    original version of `square` as a reference.
 
    ```js
-   function square(x){return x*x;}
+   function square(x){
+     return x*x;}
 
-   function square (x) { return x *x;
+   function square(x){ 
+     return x *x;
    }
 
-   function square(x)
-   {
+   function square(x){
    return x * x;
    }
    ```
@@ -83,7 +85,7 @@
 
   ```js
   function cube(x) {
-    // your code here
+    return x*x*x
   }
   ```
 
@@ -93,40 +95,48 @@
 
   ```js
   // don't forget the parameters!
-  function fullName() {
-    // your code here
+  function fullName(fistName , lastName) {
+   return fistName + ' ' + lastName
   }
-  fullName("John", "Doe") // => "John Doe"
-  ```
 
+
+```js
 9. Write a function `average` that takes two numbers as input (parameters), and
    returns the average of those numbers.
 
+function average(n1,n2){
+  return (n1 + n2)/2
+}
+
 10. Write a function `greeter` that takes a name as an argument and *greets*
-    that name by returning something along the lines of `"Hello, <name>!"`
+    that name by returning something along the lines of `"Hello, <name>!"` -->
+
+function greeter(name){
+return 'hello' +' '+ name
+}
 
 11. Using the document found at <a href="http://www.gbcnv.edu/documents/ASC/docs/00000005.pdf" target="_blank">this link</a>, translate the first page of geometric
     formulas into JavaScript functions.
 
-    As an example, a function to compute the perimeter of a rectangle might look
-    like this:
+   As an example, a function to compute the perimeter of a rectangle might look
+    like this: 
 
-    ```js
-    function perimeterRect(l, w) {
-      return 2 * (l + w);
-    }
-    ```
+    // ```js
+    // function perimeterRect(l, w) {
+    //   return 2 * (l + w);
+    // }
+    // ```
 
-    **NOTE:** JavaScript provides some nifty mathematical functions and
-    constants built into the language that you'll need for this exercise. The
-    two that we'll be making use of are:
+    // **NOTE:** JavaScript provides some nifty mathematical functions and
+    // constants built into the language that you'll need for this exercise. The
+    // two that we'll be making use of are:
 
-    ```js
-    Math.PI; // => 3.141592653589793
-    Math.sqrt(256); // => 16
-    ```
+    // ```js
+    // Math.PI; // => 3.141592653589793
+    // Math.sqrt(256); // => 16
+    // ```
 
-    To test your answers, you'll need to:
+    // To test your answers, you'll need to:
 
     1. Code your function in the console in the way that you think it will work
     2. Call the function with arguments in the console to see the result, e.g.
